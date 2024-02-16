@@ -174,7 +174,7 @@ button {
 
 /* Hero */
 .hero {
-  /* width: 100%; */
+  /* max-width: 320px; */
   margin: 0 auto;
   background-color: #2e2f42;
   background-image: linear-gradient(
@@ -182,23 +182,24 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office1.jpg);
+    url(../images/people-office1-mob.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 432px;
   padding-top: 72px;
   padding-bottom: 72px;
 }
 
-@media (min-resolution: 192dpi) {
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office1@2x.jpg);
+      url(../images/people-office1-mob@2x.jpg);
   }
 }
 
@@ -237,9 +238,28 @@ button {
 
 @media screen and (min-width: 768px) {
   .hero {
+    /* max-width: 768px; */
     padding-top: 112px;
     padding-bottom: 112px;
-    height: 436px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office1-tabl.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office1-tabl@2x.jpg);
+    }
   }
 
   .hero-title {
@@ -251,9 +271,28 @@ button {
 
 @media screen and (min-width: 1158px) {
   .hero {
+    /* max-width: 1440px; */
     padding-top: 188px;
     padding-bottom: 188px;
-    height: 600px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office1.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office1-mob@2x.jpg);
+    }
   }
 
   .hero-title {
@@ -602,9 +641,10 @@ button {
 /* Footer */
 
 .footer {
+  width: 100vw;
   background-color: #2e2f42;
-  padding-left: 96px;
-  padding-right: 96px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .footer-logo {
@@ -612,11 +652,13 @@ button {
   color: #4d5ae5;
   font-size: 18px;
   font-weight: 700;
+  /* text-align: center; */
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  display: inline-block;
+  display: block;
   margin-bottom: 16px;
+  /* margin: 0 auto 16px; */
 }
 
 .footer-logo-white {
@@ -631,20 +673,22 @@ button {
   width: 264px;
 }
 
-.footer-logo-text {
+/* .footer-logo-text {
   margin-right: 120px;
-}
+} */
 
 .footer-cont {
   display: flex;
-  flex-direction: column
-  align-items: ;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 
 .footer-soc-title {
   color: #fff;
   font-size: 16px;
   font-weight: 500;
+  text-align: center;
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
@@ -687,7 +731,6 @@ button {
 }
 
 .footer-soc {
-  margin-right: 80px;
 }
 
 .footer-form {
@@ -745,12 +788,30 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  .footer-cont {
+    flex-direction: row;
+  }
+
+  .footer-soc-title {
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 1158px) {
   .footer {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .footer-logo-text {
+    margin-right: 120px;
+  }
+
+  .footer-soc {
+    margin-right: 80px;
+  }
+
+  .footer-soc-title {
   }
 }
 
